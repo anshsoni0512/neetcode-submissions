@@ -1,0 +1,60 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        
+        # check every element with other
+        # for i in range(len(nums)):
+        #     for j in range(i+1,len(nums)):
+        #         if nums[i]==nums[j]:
+        #             return True
+        # return False
+
+        # #check if elemsnt exist in list if yes then duplicate, 
+        # l=[]
+        # for i in nums:
+        #     if i in l:
+        #         return True
+        #     else:
+        #         l.append(i)
+        # return False
+
+
+        hashset=set()  #definfing empty set
+        #convert list into set 
+        hashset=set(nums)
+        if len(nums)==len(hashset):
+            return False
+        else:
+            return True
+        # for i in range(len(nums)):
+        #     for j in range(i+1,len(nums)):
+        #         if nums[i]==nums[j]:
+        #             return True
+        # return False
+
+        # sorted_nums=nums.sort()    
+        # print(sorted_nums)
+        # for i in range(1,len(nums)):
+        #     if nums[i-1]==nums[i]:
+        #         return True
+        # return False
+
+
+        # dup=[]
+        # for n in nums:
+        #     if n in dup:
+        #         return True
+        #     dup.append(n)
+        # return False
+
+
+        len_nums=len(nums)
+        seen=set()
+        seen=set(nums)
+        len_seen=len(seen)
+        if len_nums==len_seen:
+            return False
+        else:
+            return True
+
+
+        
